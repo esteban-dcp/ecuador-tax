@@ -13,7 +13,7 @@ const ALG_SHA1 = 'http://www.w3.org/2000/09/xmldsig#sha1';
 const ALG_ENVELOPED = 'http://www.w3.org/2000/09/xmldsig#enveloped-signature';
 
 export interface SignOptions {
-  /** Momento de la firma (xs:dateTime). Por defecto, ahora. */
+  /** Momento de la firma. Se escribe en hora de Ecuador (-05:00). Por defecto, ahora. */
   readonly signingTime?: Date;
   /** Id del elemento raíz a firmar. Por defecto `comprobante`. */
   readonly referenceId?: string;
@@ -80,7 +80,8 @@ export function signXml(xml: string, credentials: SigningCredentials, options: S
   const certId = `Certificate${certN}`;
   const docRefId = `Reference-ID-${docRefN}`;
 
-  const signingTime = (options.signingTime ?? new Date()).toISOString().replace(/\.\d{3}Z$/, 'Z');
+  // Como en el ejemplo oficial (Anexo 14): hora de Ecuador con offset fijo -05:00 (no hay horario de verano).
+  const signingTime = new Date((options.signingTime ?? new Date()).getTime() - 5 * 3_600_000).toISOString().replace(/\.\d{3}Z$/, '-05:00');
   const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
   const signedProperties =

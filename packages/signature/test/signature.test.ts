@@ -13,7 +13,7 @@ describe('loadCredentialsFromP12', () => {
   it('carga certificado y expone metadatos', () => {
     const c = loadCredentialsFromP12(t.p12, t.password);
     expect(c.subjectCommonName).toBe('CERTIFICADO DE PRUEBA SDK');
-    expect(c.issuerName).toBe('C=EC,O=ECUADOR TAX SDK TEST,CN=CERTIFICADO DE PRUEBA SDK');
+    expect(c.issuerName).toBe('CN=CERTIFICADO DE PRUEBA SDK,O=ECUADOR TAX SDK TEST,C=EC');
     expect(c.serialNumber).toBe(BigInt('0x01a2b3c4d5e6f7').toString());
   });
   it('contraseña incorrecta no filtra información', () => {

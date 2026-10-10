@@ -17,10 +17,11 @@ export function createTestP12(opts: { password?: string; cn?: string; notBefore?
   cert.serialNumber = '01a2b3c4d5e6f7';
   cert.validity.notBefore = opts.notBefore ?? new Date(Date.now() - 86_400_000);
   cert.validity.notAfter = opts.notAfter ?? new Date(Date.now() + 365 * 86_400_000);
+  // Orden de codificación habitual de las entidades certificadoras: C, O, CN (el issuer se escribe invertido en XAdES).
   const attrs = [
-    { name: 'commonName', value: opts.cn ?? 'CERTIFICADO DE PRUEBA SDK' },
-    { name: 'organizationName', value: 'ECUADOR TAX SDK TEST' },
     { name: 'countryName', value: 'EC' },
+    { name: 'organizationName', value: 'ECUADOR TAX SDK TEST' },
+    { name: 'commonName', value: opts.cn ?? 'CERTIFICADO DE PRUEBA SDK' },
   ];
   cert.setSubject(attrs);
   cert.setIssuer(attrs);
