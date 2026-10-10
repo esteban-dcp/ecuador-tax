@@ -1,4 +1,6 @@
 packages:
   - packages/*
+
+# esbuild trae su binario por dependencias opcionales; su script postinstall no es necesario.
 allowBuilds:
-  esbuild: set this to true or false
+  esbuild: false
