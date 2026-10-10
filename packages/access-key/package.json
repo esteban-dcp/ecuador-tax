@@ -1,6 +1,6 @@
 {
   "name": "@ecuador-tax/access-key",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generación y validación de claves de acceso de comprobantes electrónicos del SRI",
   "license": "MIT",
   "author": "Esteban <esteban-dcp>",

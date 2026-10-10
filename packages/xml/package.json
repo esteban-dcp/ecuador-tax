@@ -1,6 +1,6 @@
 {
   "name": "@ecuador-tax/xml",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Modelos y generación de XML de comprobantes electrónicos del SRI",
   "license": "MIT",
   "author": "Esteban <esteban-dcp>",

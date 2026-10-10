@@ -1,6 +1,6 @@
 {
   "name": "@ecuador-tax/signature",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Firma electrónica XAdES-BES de comprobantes del SRI",
   "license": "MIT",
   "author": "Esteban <esteban-dcp>",

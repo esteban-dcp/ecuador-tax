@@ -1,6 +1,6 @@
 {
   "name": "@ecuador-tax/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tipos, errores y utilidades compartidas del Ecuador Tax SDK",
   "license": "MIT",
   "author": "Esteban <esteban-dcp>",

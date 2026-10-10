@@ -1,6 +1,6 @@
 {
   "name": "@ecuador-tax/sri",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cliente SOAP de los servicios de recepción y autorización del SRI",
   "license": "MIT",
   "author": "Esteban <esteban-dcp>",

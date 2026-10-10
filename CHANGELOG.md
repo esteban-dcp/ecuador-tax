@@ -2,7 +2,17 @@
 
 Formato: [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/). Versionado semántico.
 
-## [0.1.0] — sin publicar
+## [0.1.1] — 2026-10-10
+
+### Cambiado
+- `@ecuador-tax/signature`: `SigningTime` se escribe en hora de Ecuador con offset `-05:00` (como el ejemplo oficial del Anexo 14 de la ficha técnica) en lugar de UTC con `Z`.
+- La estructura de la firma XAdES-BES se verifica en pruebas elemento por elemento contra el ejemplo oficial.
+- `@ecuador-tax/testing`: el certificado sintético usa el orden de DN habitual de las entidades certificadoras.
+
+### Interno
+- Publicación en npm desde GitHub Actions con provenance (trusted publishing).
+
+## [0.1.0] — 2026-10-10
 
 ### Añadido
 - `@ecuador-tax/core`: errores tipados, `Result`, enums (ambiente, tipo de comprobante), formato decimal/fecha del SRI.

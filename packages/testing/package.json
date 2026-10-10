@@ -1,6 +1,6 @@
 {
   "name": "@ecuador-tax/testing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fixtures y simuladores para probar integraciones con el SRI",
   "license": "MIT",
   "author": "Esteban <esteban-dcp>",

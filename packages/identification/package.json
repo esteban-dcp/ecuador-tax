@@ -1,6 +1,6 @@
 {
   "name": "@ecuador-tax/identification",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Validación de cédula y RUC ecuatorianos",
   "license": "MIT",
   "author": "Esteban <esteban-dcp>",
