@@ -1,0 +1,41 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "rootDir": ".",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@ecuador-tax/core": [
+        "./packages/core/src/index.ts"
+      ],
+      "@ecuador-tax/identification": [
+        "./packages/identification/src/index.ts"
+      ],
+      "@ecuador-tax/access-key": [
+        "./packages/access-key/src/index.ts"
+      ],
+      "@ecuador-tax/xml": [
+        "./packages/xml/src/index.ts"
+      ],
+      "@ecuador-tax/signature": [
+        "./packages/signature/src/index.ts"
+      ],
+      "@ecuador-tax/sri": [
+        "./packages/sri/src/index.ts"
+      ],
+      "@ecuador-tax/testing": [
+        "./packages/testing/src/index.ts"
+      ]
+    }
+  },
+  "include": [
+    "packages/*/src",
+    "packages/*/test",
+    "vitest.config.ts"
+  ]
+}

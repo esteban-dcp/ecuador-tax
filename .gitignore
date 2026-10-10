@@ -1,0 +1,12 @@
+node_modules
+dist
+*.tsbuildinfo
+coverage
+*.p12
+*.pfx
+*.pem
+*.key
+.env*
+
+# Documentos oficiales del SRI (se descargan de sri.gob.ec; no se redistribuyen)
+docs/official-sri/

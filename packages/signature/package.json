@@ -1,0 +1,59 @@
+{
+  "name": "@ecuador-tax/signature",
+  "version": "0.1.0",
+  "description": "Firma electrónica XAdES-BES de comprobantes del SRI",
+  "license": "MIT",
+  "author": "Esteban <esteban-dcp>",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esteban-dcp/ecuador-tax.git",
+    "directory": "packages/signature"
+  },
+  "homepage": "https://github.com/esteban-dcp/ecuador-tax#readme",
+  "bugs": {
+    "url": "https://github.com/esteban-dcp/ecuador-tax/issues"
+  },
+  "keywords": [
+    "ecuador",
+    "sri",
+    "factura-electronica",
+    "facturacion-electronica",
+    "tax",
+    "typescript",
+    "signature"
+  ],
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.12",
+    "node-forge": "^1.4.0",
+    "xml-crypto": "^6.3.3",
+    "@ecuador-tax/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node-forge": "^1.3.14",
+    "@ecuador-tax/testing": "workspace:*"
+  }
+}
